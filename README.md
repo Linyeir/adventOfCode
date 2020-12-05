@@ -1,3 +1,3 @@
 # adventOfCode
 
-my dirty solutions for the [advent of Code](https://adventofcode.com/)
+my javascript solutions for the [advent of Code](https://adventofcode.com/)
