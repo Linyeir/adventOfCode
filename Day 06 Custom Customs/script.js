@@ -1,4 +1,5 @@
-var inputTest =
+/**
+var input =
     [["abc"],
     ["a",
         "b",
@@ -10,9 +11,7 @@ var inputTest =
         "a",
         "a"],
     ["b"]]
-
-
-
+**/
 
 function execute() {
     var sum = 0;

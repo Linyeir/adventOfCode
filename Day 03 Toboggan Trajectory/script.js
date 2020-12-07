@@ -17,12 +17,7 @@ function execute(){
 }
 
 function executeBonus(){
-    console.log(checkDiagonal(1,1));
-    console.log(checkDiagonal(3,1));
-    console.log(checkDiagonal(5,1));
-    console.log(checkDiagonal(7,1));
-    console.log(checkDiagonal(1,2));
-
+    
     var product = checkDiagonal(1,1) * checkDiagonal(3,1)* checkDiagonal(5,1)* checkDiagonal(7,1)* checkDiagonal(1,2);
 
     document.getElementById("outputBonus").innerHTML = product;

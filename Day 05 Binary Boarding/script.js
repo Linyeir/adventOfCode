@@ -1,6 +1,8 @@
-var input1 = "BFFFBBFRRR";
-var input2 = "FFFBBBFRRR";
-var input3 = "BBFFBBFRLL";
+/**
+var input = "BFFFBBFRRR"; // should return 567
+var input = "FFFBBBFRRR"; // should return 119
+var input = "BBFFBBFRLL"; // should return 820
+**/
 
 function getSeatNumber(bsp) {
     return 8 * (

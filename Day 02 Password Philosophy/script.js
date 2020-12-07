@@ -1,15 +1,11 @@
 function checkList() {
     var count = 0;
-    for (var i = 0; i < input.length; i++) {
-        var occurence = checkPassword( input[i].password, input[i].letter);
-        console.log(occurence);
-        if(input[i].min <= occurence &&  occurence <= input[i].max){
+    input.forEach( entry =>{
+        var occurence = checkPassword(entry.password, entry.letter);
+        if(entry.min <= occurence &&  occurence <= entry.max){
             count++;
-            console.log("Password #" + i + " (" + input[i].password + ") works.");
-        }else{
-            console.log("Password #" + i + " (" + input[i].password + ") doesnt work.");
         }
-    }
+})
     document.getElementById("output").innerHTML = count;
 }
 
@@ -20,16 +16,11 @@ function checkPassword(password, letter) {
 function checkBonus(){
     var count = 0;
 
-    for (var i = 0; i < input.length; i++) {
-        var check = (input[i].password.charAt(input[i].min-1) == input[i].letter) + (input[i].password.charAt(input[i].max-1) == input[i].letter);
-        console.log(check);
-        if(check == 1){
+    input.forEach( entry =>{
+        if((entry.password.charAt(entry.min-1) == entry.letter) != (entry.password.charAt(entry.max-1) == entry.letter)){
             count++;
-            console.log("Password #" + i + " (" + input[i].password + ") works.");
-        }else{
-            console.log("Password #" + i + " (" + input[i].password + ") doesnt work.");
         }
-    }
+    })
 
     document.getElementById("outputBonus").innerHTML = count;
 
