@@ -75,7 +75,6 @@ function executeBonus() {
     // since it's give that exactly one change will suffice, we can skip backtracking and just iterate through the whole array
 
     for (var i = 0; i < input.length; i++) {
-        console.log("testing pos " + i);
         if (input[i].operation == "jmp") {
             input[i].operation = "nop";
             if(tryNow()){return}
