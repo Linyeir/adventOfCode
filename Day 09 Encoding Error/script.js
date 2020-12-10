@@ -61,14 +61,12 @@ function executeBonus() {
             }
 
             if (sumOfContigousSet == incorrectSum) {
-                var toSearch = input.slice(i,j+1);
-                toSearch.sort(function(a,b){return a-b});
-                document.getElementById("outputBonus").innerHTML = toSearch[0] + toSearch[toSearch.length-1];
+                var toSearch = input.slice(i, j + 1);
+                toSearch.sort(function (a, b) { return a - b });
+                document.getElementById("outputBonus").innerHTML = toSearch[0] + toSearch[toSearch.length - 1];
                 return;
             }
 
         }
     }
 }
-
-71787015
