@@ -16,3 +16,4 @@ Embedded in the simplest of HTML Documents so you can directly run them (without
 |   ✔    | [Day 9: Encoding Error](/Day-09-Encoding-Error/index.html)           |
 |   ✔    | [Day 10: Adapter Array](/Day-10-Adapter-Array/index.html)            |
 |   ✔    | [Day 11: Seating System](/Day-11-Seating-System/index.html)          |
+|   ✔    | [Day 12: Rain Risk](/Day-12-Rain-Risk/index.html)                    |
