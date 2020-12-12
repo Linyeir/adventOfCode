@@ -1,5 +1,5 @@
-/*//should return 37 or 26 respectively
-var input = `L.LL.LL.LL
+//should return 37 or 26 respectively
+var inputTest = `L.LL.LL.LL
 LLLLLLL.LL
 L.L.L..L..
 LLLL.LL.LL
@@ -9,12 +9,12 @@ L.LLLLL.LL
 LLLLLLLLLL
 L.LLLLLL.L
 L.LLLLL.LL`
-*/
+
 
 var matrix = [
   { x: -1, y: -1 }, { x: 0, y: -1 }, { x: 1, y: -1 },
-  { x: -1, y: 0 }, /* middle field */ { x: 1, y: 0 },
-  { x: -1, y: 1 }, { x: 0, y: 1 }, { x: 1, y: 1 }
+   { x: -1, y: 0 },   /* centre */    { x: 1, y: 0 },
+   { x: -1, y: 1 },  { x: 0, y: 1 },  { x: 1, y: 1 }
 ]
 
 function getFullAdjacentSeats(layout, row, column) {
