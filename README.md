@@ -17,3 +17,4 @@ Embedded in the simplest of HTML Documents so you can directly run them (without
 |   🎅    | [Day 10: Adapter Array](/Day-10-Adapter-Array)            |
 |   🦌    | [Day 11: Seating System](/Day-11-Seating-System)          |
 |   🎅    | [Day 12: Rain Risk](/Day-12-Rain-Risk)                    |
+|   ⛄    | [Day 13: Shuttle Search](/Day-12-Rain-Risk)               |
