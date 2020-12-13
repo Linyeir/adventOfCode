@@ -1,67 +1,49 @@
-/**
-var input = [
-  //should return 127
-  35,
-  20,
-  15,
-  25,
-  47,
-  40,
-  62,
-  55,
-  65,
-  95,
-  102,
-  117,
-  150,
-  182,
-  127,
-  219,
-  299,
-  277,
-  309,
-  576,
-];
-*/
 
-function getIncorrectSum() {
-    var preamble = 25;
 
-    for (var i = preamble; i < input.length; i++) {
+
+function getIncorrectSum(preamble, XMAS) {
+    for (var i = preamble; i < XMAS.length; i++) {
         var isPossible = false;
         for (var j = (i - preamble); j < i; j++) {
             for (var k = (i - preamble); k < i; k++) {
-                if (j != k && (input[j] + input[k] == input[i])) {
+                if (j != k && (XMAS[j] + XMAS[k] == XMAS[i])) {
                     isPossible = true;
                 }
             }
         }
         if (!isPossible) {
-            return input[i];
+            return XMAS[i];
         }
     }
     return false;
 }
 
 function execute() {
-    document.getElementById("output").innerHTML = getIncorrectSum();
+    var XMAS = input.split("\n")
+        .map(x => +x);
+    var preamble = 25;
+    console.log(XMAS);
+    document.getElementById("output").innerHTML = getIncorrectSum(preamble, XMAS);
 }
 
 function executeBonus() {
-    var incorrectSum = getIncorrectSum();
+    var XMAS = input.split("\n")
+        .map(x => +x);
+    var preamble = 25;
+    var incorrectSum = getIncorrectSum(preamble, XMAS);
 
-    for (var i = 0; i < input.length; i++) {
-        var sumOfContigousSet = input[i];
+    for (var i = 0; i < XMAS.length; i++) {
+        var sumOfContigousSet = XMAS[i];
 
-        for (var j = i + 1; j < input.length; j++) {
-            sumOfContigousSet += input[j];
+        for (var j = i + 1; j < XMAS.length; j++) {
+            sumOfContigousSet += XMAS[j];
 
             if (sumOfContigousSet > incorrectSum) {
-                j = input.length;
+                j = XMAS.length;
             }
 
             if (sumOfContigousSet == incorrectSum) {
-                var toSearch = input.slice(i, j + 1);
+                var toSearch = XMAS.slice(i, j + 1);
                 toSearch.sort(function (a, b) { return a - b });
                 document.getElementById("outputBonus").innerHTML = toSearch[0] + toSearch[toSearch.length - 1];
                 return;

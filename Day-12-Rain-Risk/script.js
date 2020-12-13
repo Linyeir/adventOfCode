@@ -1,12 +1,3 @@
-//should return 25 for exercise 1
-var inputTest =
-  `F10
-N3
-F7
-R90
-F11`
-
-
 function mod(value, modulo) {
   return ((value % modulo) + modulo) % modulo;
 }

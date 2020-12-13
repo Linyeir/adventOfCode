@@ -1,16 +1,3 @@
-//should return 37 or 26 respectively
-var inputTest = `L.LL.LL.LL
-LLLLLLL.LL
-L.L.L..L..
-LLLL.LL.LL
-L.LL.LL.LL
-L.LLLLL.LL
-..L.L.....
-LLLLLLLLLL
-L.LLLLLL.L
-L.LLLLL.LL`
-
-
 var matrix = [
   { x: -1, y: -1 }, { x: 0, y: -1 }, { x: 1, y: -1 },
    { x: -1, y: 0 },   /* centre */    { x: 1, y: 0 },
