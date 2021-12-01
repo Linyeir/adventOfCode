@@ -1,7 +1,7 @@
 # adventOfCode
 
 My Javascript solutions for the [Advent of Code](https://adventofcode.com/).  
-This year i'll try myself on NPM.  
+This year i'll try myself on node.  
 
 | Status | Link                                                              |
 | :----: | ----------------------------------------------------------------- |
