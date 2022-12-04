@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	//Read input file and add an empty line to the bottom, so the last elf doesnt get ignored
+	//Read, clean and split input file
 	input, err := os.ReadFile("input.txt")
 	if err != nil {
 		log.Fatal(err)
@@ -17,7 +17,7 @@ func main() {
 	inputTmp := strings.TrimSuffix(string(input), "\n")
 	rucksacks := strings.Split(string(inputTmp), "\n")
 
-	// partOne(rucksacks)
+	partOne(rucksacks)
 	partTwo(rucksacks)
 }
 
