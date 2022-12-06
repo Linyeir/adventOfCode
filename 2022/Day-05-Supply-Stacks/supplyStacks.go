@@ -16,7 +16,6 @@ func main() {
 
 	//split input at double new line (on windows and elsewhere)
 	parts := strings.Split(strings.ReplaceAll(string(strings.TrimSuffix(string(input), "\n")), "\r\n", "\n"), "\n\n")
-	//make cargo instructions useful
 
 	crateMover9000(parseCrates(strings.Split(parts[0], "\n")), strings.Split(parts[1], "\n"))
 	crateMover9001(parseCrates(strings.Split(parts[0], "\n")), strings.Split(parts[1], "\n"))
