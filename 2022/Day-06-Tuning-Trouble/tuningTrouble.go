@@ -13,31 +13,21 @@ func main() {
 		log.Fatal(err)
 	}
 
-	startOfSignal(string(input))
-	startOfMessage(string(input))
-
+	fmt.Println("The signal starts a position: ", firstUniqueSequence(string(input), 4))
+	fmt.Println("The message starts a position: ", firstUniqueSequence(string(input), 14))
 }
 
-func startOfSignal(signal string) {
+func firstUniqueSequence(signal string, length int) int {
 	for i := range signal {
-		if unique(signal[i : i+4]) {
-			fmt.Println("The signal starts a position: ", i+4)
-			return
+		if unique(signal[i : i+length]) {
+			return i + length
 		}
 	}
-}
-
-func startOfMessage(signal string) {
-	for i := range signal {
-		if unique(signal[i : i+14]) {
-			fmt.Println("The message starts a position: ", i+14)
-			return
-		}
-	}
+	return len(signal)
 }
 
 func unique(input string) bool {
-	var set map[rune]bool
+	set := make(map[rune]bool)
 	for _, char := range input {
 		_, isInSet := set[char]
 		if isInSet {
